@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SMStudent.Database.StudentTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div class="float-md-right">
+    @Html.ActionLink("Add New Student", "Create", new { id = Session["ID"] }, new { @class = "btn btn-primary" })
+</div>
+<br />
+<br />
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Student List</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+                <div class="row">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Session
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Roll
+                                </th>
+                                <th>
+                                    Class
+                                </th>
+                                <th>
+                                    Phone
+                                </th>
+                                <th>
+                                    Photo
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                            </thead>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SessionTable.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.RollNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClassTable.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ContactNo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Photo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.IsActive)
+                                    </td>
+                                    <td class="btn-group">
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary" }) 
+                                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-info" }) 
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                                    </td>
+                                </tr>
+                            }
+
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

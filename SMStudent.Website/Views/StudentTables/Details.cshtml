@@ -1,0 +1,299 @@
+﻿@model SMStudent.Database.StudentTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RollNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RollNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MotherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdmissionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdmissionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VaccinationCard_Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VaccinationCard_Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birth_Certificate_Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birth_Certificate_Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Previous_School_Marksheet_Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Previous_School_Marksheet_Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Previous_School_Certificate_Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Previous_School_Certificate_Photo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Previous_CGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Previous_CGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Previous_School_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Previous_School_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherPostalAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherPostalAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherEmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EditDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassTable.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassTable.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DivisionTable.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DivisionTable.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherProfesion.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherProfesion.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenderTable.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenderTable.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kota.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kota.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostOffice.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostOffice.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReligiousTable.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReligiousTable.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionTable.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionTable.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserTable.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserTable.FullName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SMStudent.Database.ApplicationForInstallmentTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+
+<h2>@Session["Name"]</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",new { id=Session["SID"]})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Apply Date
+        </th>
+        <th>
+            Description
+        </th>
+
+        <th>
+            Active
+        </th>
+        <th>
+            Last Edited
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SubmisionDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.IsActive)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EditTime)
+    </td>
+    <td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

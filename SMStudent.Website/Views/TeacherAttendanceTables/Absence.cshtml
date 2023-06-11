@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SMStudent.Database.TeacherAttendanceTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+
+}
+
+<div class="float-md-right">
+    @Html.ActionLink("Add New Attendence", "Attendence", new { id = Session["ID"] }, new { @class = "btn btn-primary" })
+</div>
+<br />
+<br />
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Teacher Attendance List</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+                <div class="row">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Teacher Name
+                                </th>
+                                <th>
+                                    Last Updated
+                                </th>
+                                <th>
+                                    Absense
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TeacherTable.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EditDate)
+                                </td>
+                                @if (item.AttendDate != null)
+                                {
+                                    <td>
+                                        Present
+                                    </td>
+                                }
+                                @if (item.AttendDate == null)
+                                {
+                                    <td>
+                                        Absent
+                                    </td>
+                                }
+
+                                <td class="btn-group">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

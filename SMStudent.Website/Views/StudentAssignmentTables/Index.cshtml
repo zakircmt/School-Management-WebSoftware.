@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SMStudent.Database.StudentAssignmentTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",new { id=Session["SID"]})
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Teacher Name
+        </th>
+        <th>
+            Subject 
+        </th>
+        <th>
+           Submission Date
+        </th>
+        <th>
+           Name
+        </th>
+        <th>
+           Short Description
+        </th>
+
+        <th>
+            Source File
+        </th>
+        <th>
+           Active
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Teacher.Name)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.SubjectTable.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SubmisionDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Photo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsActive)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { Id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { Id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { Id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

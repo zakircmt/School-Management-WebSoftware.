@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5b8f91cd0fc84f5f8a12328fd2aeb4a9" Name="Diagram1">
+        <EntityTypeShape EntityType="SMStudentModel.ApplicationForInstallmentTable" Width="1.5" PointX="11.25" PointY="61" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ClassRoutinelTable" Width="1.5" PointX="14.25" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ClassTable" Width="1.5" PointX="5.25" PointY="44" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.DivisionTable" Width="1.5" PointX="20.25" PointY="54.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.EstablishmentFeelTable" Width="1.5" PointX="8.25" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.EventTable" Width="1.5" PointX="5.25" PointY="50.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ExamFeelTable" Width="1.5" PointX="11.25" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ExamMarksTable" Width="1.5" PointX="11.25" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ExamTable" Width="1.5" PointX="22.5" PointY="61.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ExtraCaricualActiviesTable" Width="1.5" PointX="5.25" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.FatherProfesion" Width="1.5" PointX="0.75" PointY="67.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.GenderTable" Width="1.5" PointX="0.75" PointY="64.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.GradeTable" Width="1.5" PointX="9" PointY="76" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.Kota" Width="1.5" PointX="3.75" PointY="69.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.meetingFixableTable" Width="1.5" PointX="5.25" PointY="73.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.Nationality" Width="1.5" PointX="0.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.notificationTable" Width="1.5" PointX="14.25" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ParentsInformationTable" Width="1.5" PointX="3" PointY="63.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.PostOffice" Width="1.5" PointX="0.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.ReligiousTable" Width="1.5" PointX="0.75" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.SchoolLeavingTable" Width="1.5" PointX="14.25" PointY="54.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.SessionTable" Width="1.5" PointX="5.25" PointY="76.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudentAnnualFeeTable" Width="1.5" PointX="8.25" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudentAssignmentTable" Width="1.5" PointX="14.25" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudentAttendanceTable" Width="1.5" PointX="17.25" PointY="60.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudentDailyWorklTable" Width="1.5" PointX="17.25" PointY="66.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudentTable" Width="1.5" PointX="6" PointY="59.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.StudyTourFeelTable" Width="1.5" PointX="17.25" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.SubjectTable" Width="1.5" PointX="25.5" PointY="60" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.TeacherAttendanceTable" Width="1.5" PointX="17.25" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.TeacherFeedbackTable" Width="1.5" PointX="20.25" PointY="61.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.TeacherTable" Width="1.5" PointX="9" PointY="61.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.TransportationFeelTable" Width="1.5" PointX="8.25" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.TuisionFeeTable" Width="1.5" PointX="11.25" PointY="50.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.UserAttendanceTable" Width="1.5" PointX="5.25" PointY="82.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.UserTable" Width="1.5" PointX="3" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SMStudentModel.UserTypeTable" Width="1.5" PointX="0.75" PointY="60.375" IsExpanded="true" />
+        <AssociationConnector Association="SMStudentModel.FK_ApplicationForInstallmentTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ApplicationForInstallmentTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ApplicationForInstallmentTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ApplicationForInstallmentTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ApplicationForInstallmentTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_SubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassRoutinelTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ClassTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EstablishmentFeelTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamFeelTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SchoolLeavingTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAnnualFeeTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentDailyWorklTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SubjectTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherFeedbackTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TransportationFeelTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TuisionFeeTable_ClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_DivisionTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_DivisionTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EstablishmentFeelTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamFeelTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAnnualFeeTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentDailyWorklTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SubjectTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TransportationFeelTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TuisionFeeTable_DivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EstablishmentFeelTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EstablishmentFeelTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EstablishmentFeelTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_EventTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamFeelTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamFeelTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamFeelTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_ExamTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_GradeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_SubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamMarksTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExamTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ExtraCaricualActiviesTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_FatherProfesion" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_FatherProfesion" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_GenderTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_GenderTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherTable_GenderTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserTable_GenderTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_Kota" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_meetingFixableTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherTable_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserTable_Nationality" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_notificationTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_notificationTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_PostOffice" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_ReligiousTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_ParentsInformationTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_PostOffice" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherTable_PostOffice" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserTable_PostOffice" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_ReligiousTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherTable_ReligiousTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserTable_ReligiousTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SchoolLeavingTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SchoolLeavingTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SchoolLeavingTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SessionTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentDailyWorklTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SubjectTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherFeedbackTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TransportationFeelTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TuisionFeeTable_SessionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAnnualFeeTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAnnualFeeTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_SubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAssignmentTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentAttendanceTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentDailyWorklTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentDailyWorklTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudentTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherFeedbackTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TransportationFeelTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TuisionFeeTableTable_StudentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_StudyTourFeelTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_SubjectTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherAttendanceTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherAttendanceTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherFeedbackTable_TeacherTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TeacherTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TransportationFeelTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_TuisionFeeTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserAttendanceTable_UserTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SMStudentModel.FK_UserTable_UserTypeTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

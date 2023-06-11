@@ -1,0 +1,112 @@
+﻿@model IEnumerable<SMStudent.Database.ParentsInformationTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EditTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherProfesion.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GenderTable.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nationality.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostOffice.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReligiousTable.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserTable.FullName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EditTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherProfesion.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GenderTable.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nationality.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostOffice.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReligiousTable.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserTable.FullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

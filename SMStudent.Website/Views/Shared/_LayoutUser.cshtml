@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/Student/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Content/Student/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="~/Content/Student/vendor/jquery/jquery.min.js"></script>
+    <link href="~/Content/Student/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index","UserDashboard",new { id=Session["ID"]})">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3"> Staff Dashboard <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>@Session["FullName"]</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProfile"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Configurations</span>
+                </a>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Sessions Information :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","SessionTables")" ">View Sessions List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","SessionTables",new { Id=Session["ID"]})">Add New Session</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Subjects Information :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","Subject")" ">View Subject List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","Subject",new { Id=Session["ID"]})">Add New Subject</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Gender Information :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","GenderTables")">View Gender List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","GenderTables",new { Id=Session["ID"]})">Add New Gender</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Profesions Information:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","FatherProfesions")">View Proffesions List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","FatherProfesions",new { Id=Session["ID"]})">Add New Proffesion</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Quota Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","Kotas")">View Quota List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","Kotas",new { Id=Session["ID"]})">Add New Quota</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Nationality Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","Nationalities")">View Nationality List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","Nationalities",new { Id=Session["ID"]})">Add New Nationality</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Postoffice Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","PostOffices")">View PostOffice List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","PostOffices",new { Id=Session["ID"]})">Add New PostOffice</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Religious Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ReligiousTables")">View Religious List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ReligiousTables",new { Id=Session["ID"]})">Add New Religious</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Class Informations :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ClassTables")">View Class List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ClassTables",new { Id=Session["ID"]})">Add New Class</a>
+                    </div>
+                </div>
+                <div id="collapseProfile" class="collapse" aria-labelledby="headingProfile" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Group Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","DivisionTables")">View Groups List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","DivisionTables",new { Id=Session["ID"]})">Add New Groups</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseResult"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Class Routine</span>
+                </a>
+                <div id="collapseResult" class="collapse" aria-labelledby="headingResult" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Class Routine:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ClassRoutinelTables")">View Class Routine</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ClassRoutinelTables",new { id=Session["ID"]})">Add New Classroutine</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAssignment"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Teacher Attendence</span>
+                </a>
+                <div id="collapseAssignment" class="collapse" aria-labelledby="headingAssignment" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Teacher Attendence:</h6>
+
+                        <a class="collapse-item" href="@Url.Action("Index","TeacherAttendanceTables",new { id=Session["ID"]})">Teacher Attendence List</a>
+                        <a class="collapse-item" href="@Url.Action("Attendence","TeacherAttendanceTables",new { id=Session["ID"]})">Add New Attendence</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFee"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Student</span>
+                </a>
+                <div id="collapseFee" class="collapse" aria-labelledby="headingFee" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Student Informations:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","StudentTables")">View Student List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","StudentTables",new { id=Session["ID"]})">Add New Student</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReaddmission"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Notification</span>
+                </a>
+                <div id="collapseReaddmission" class="collapse" aria-labelledby="headingReaddmission" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Meeting Notifications :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","meetingFixableTables")">View Meeting List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","meetingFixableTables",new { Id=Session["SID"]})">Add New Meeting</a>
+                    </div>
+                </div>
+                <div id="collapseReaddmission" class="collapse" aria-labelledby="headingReaddmission" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Notifications :</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","notificationTables")">View Notifications</a>
+                        <a class="collapse-item" href="@Url.Action("Create","notificationTables",new { Id=Session["SID"]})">Add New Notification</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClass"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Student Fee</span>
+                </a>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Exam Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ExamFeelTables")">Exam Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ExamFeelTables",new{id=Session["ID"]})">Add New Exam Fee</a>
+                    </div>
+                </div>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Annual Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","StudentAnnualFeeTables")">Annual Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","StudentAnnualFeeTables",new{id=Session["ID"]})">Add New Annual Fee</a>
+                    </div>
+                </div>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Tour Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","StudyTourFeelTables")">Tour Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","StudyTourFeelTables",new{id=Session["ID"]})">Add New Tour Fee</a>
+                    </div>
+                </div>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Transportation Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","TransportationFeelTables")">Transportation Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","TransportationFeelTables",new{id=Session["ID"]})">Add New Transportaion Fee</a>
+                    </div>
+                </div>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Tuition Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","TuisionFeeTables")">Tuition Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","TuisionFeeTables",new{id=Session["ID"]})">Add New Tuition Fee</a>
+                    </div>
+                </div>
+                <div id="collapseClass" class="collapse" aria-labelledby="headingClass" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Establishment Fee:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","EstablishmentFeelTables")">Establishment Fee List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","EstablishmentFeelTables",new{id=Session["ID"]})">Add New Establishment Fee</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCarry"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Class Routine</span>
+                </a>
+                <div id="collapseCarry" class="collapse" aria-labelledby="headingCarry" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Class Routine:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ClassRoutinelTables",new { Id=Session["ID"]})">View Class Routine</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ClassRoutinelTables",new { Id=Session["SID"]})">Add New Routine</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOptional"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Exam Information</span>
+                </a>
+                <div id="collapseOptional" class="collapse" aria-labelledby="headingOptional" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Exam Information:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ExamTables")">View Exam List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ExamTables",new { id=Session["ID"]})">Add New Exam</a>
+                    </div>
+                </div>
+                <div id="collapseOptional" class="collapse" aria-labelledby="headingOptional" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Exam Marks:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","ExamMarksTables")">View Exam Mark List</a>
+                        <a class="collapse-item" href="@Url.Action("Create","ExamMarksTables",new { id=Session["ID"]})">Add New Mark</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLeave"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Leave</span>
+                </a>
+                <div id="collapseLeave" class="collapse" aria-labelledby="headingLeave" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+
+                        <a class="collapse-item" href="@Url.Action("Create","Leave",new { id=Session["ID"]})">New Leave</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Leave",new { id=Session["ID"]})">All Leave</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTeacher"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Others</span>
+                </a>
+                <div id="collapseTeacher" class="collapse" aria-labelledby="headingTeacher" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header" style="color:black">Others:</h6>
+                        <a class="collapse-item" href="@Url.Action("Index","EventTables")">Event List</a>
+                        <a class="collapse-item" href="@Url.Action("Index","EventTables",new { id=Session["ID"]})">Add New Event</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="@Url.Action("LogOut","Auth")"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <p class="text-center mb-2"><strong>Nil Tech IT</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://www.niltechit.com">Upgrade to Pro! with Nil Tech IT</a>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                 aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                               placeholder="Search for..." aria-label="Search"
+                                               aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">
+                                            Hi there! I am wondering if you can help me with a
+                                            problem I've been having.
+                                        </div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                             alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            I have the photos that you ordered last month, how
+                                            would you like them sent to you?
+                                        </div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                             alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!
+                                        </div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                             alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...
+                                        </div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                     src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                 aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    @RenderBody()
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+
+    <script src="~/Content/Student/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Content/Student/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Content/Student/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Content/Student/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/Student/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/Student/js/demo/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Content/Student/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/Student/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Content/Student/js/demo/datatables-demo.js"></script>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+</body>
+
+</html>

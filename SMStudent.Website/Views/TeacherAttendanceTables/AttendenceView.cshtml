@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "AttendenceView";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>
+    @foreach(String item in ViewBag.Data)
+            {
+                <p>@item</p>
+            }
+</h2>
